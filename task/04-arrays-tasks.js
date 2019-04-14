@@ -348,7 +348,36 @@ function getPositivesCount(arr) {
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
 function sortDigitNamesByNumericOrder(arr) {
-   throw new Error('Not implemented');
+   var newarr=arr.map(function(x) {
+      if (x==='one'){x=1; return x};
+      if (x==='two'){x=2; return x};
+      if (x==='three'){x=3; return x};
+      if (x==='four'){x=4; return x};
+      if (x==='five'){x=5; return x};
+      if (x==='six'){x=6; return x};
+      if (x==='seven'){x=7; return x};
+      if (x==='eight'){x=8; return x};
+      if (x==='nine'){x=9; return x};
+      if (x==='zero'){x=0; return x};
+
+   });
+   var sorted=newarr.sort((a,b)=>a-b);
+   var result=sorted.map(function(x) {
+      if (x===1){x='one'; return x};
+      if (x===2){x='two'; return x};
+      if (x===3){x='three'; return x};
+      if (x===4){x='four'; return x};
+      if (x===5){x='five'; return x};
+      if (x===6){x='six'; return x};
+      if (x===7){x='seven'; return x};
+      if (x===8){x='eight'; return x};
+      if (x===9){x='nine'; return x};
+      if (x===0){x='zero'; return x};
+
+   });
+    return result;
+
+   
 }
 
 /** 
@@ -382,7 +411,8 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
-   throw new Error('Not implemented');
+   var newarr=arr.filter(item=>new Boolean(item)==false);
+   return newarr.length;
 }
 
 /**
@@ -445,8 +475,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
-   console.log(arr);
-   return arr.sort(function sorting(a,b) {
+    return arr.sort(function sorting(a,b) {
 
       if (a.country > b.country){ return 1;} else {
          if (a.country < b.country) {return -1;} else {
@@ -560,8 +589,10 @@ function group(array, keySelector, valueSelector) {
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
 function selectMany(arr, childrenSelector) {
-  // console.log(arr);
-//     return arr.map(childrenSelector);
+  //var newarr=arr.join(',').split(',');
+ // console.log(arr.join(','));
+ // console.log(newarr);
+//  return newarr.map(childrenSelector);
 throw new Error('Not implemented');
 }
 
@@ -579,7 +610,10 @@ throw new Error('Not implemented');
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 function getElementByIndexes(arr, indexes) {
-    throw new Error('Not implemented');
+   //console.log(arr, indexes);
+  // console.log(arr[indexes.join(',')]);
+  // return arr[indexes.join(',')];
+   throw new Error('Not implemented');
 }
 
 
