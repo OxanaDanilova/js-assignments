@@ -49,7 +49,12 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    let pr=1;
+   for (let i=1;i<=n;i++) {
+       pr=pr*i;
+   };
+   return pr;
+
 }
 
 
@@ -173,7 +178,13 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-    throw new Error('Not implemented');
+    console.log(str);
+    var arr=str.split('');
+    var newarr=Array.from(new Set(arr));
+    console.log(newarr);
+    if (newarr.length===0){return null;} else {return newarr[0]};
+    
+   // throw new Error('Not implemented');
 }
 
 
